@@ -54,3 +54,9 @@ form TextField {
 .toggle-btn button{
   width: 90px;
 }
+.span-theme-btn{
+  float: right;
+}
+.span-theme-btn button{
+  width: 90px;
+}
