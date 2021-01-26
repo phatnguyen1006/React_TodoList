@@ -48,3 +48,9 @@ form TextField {
   padding: 0 1.5em;
   font-size: initial;
 }
+.toggle-btn{
+  float: right;
+}
+.toggle-btn button{
+  width: 90px;
+}
