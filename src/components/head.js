@@ -9,16 +9,14 @@ const Header = () => {
     // Catch Context
     const { spanState } = useContext(SpanTheme)
     // console.log(spanState)
-    const { color } =  spanState ;
+    const { isColor } =  spanState ;
     // Assign to Style
-    // console.log(color)
-    const style = {color}
-
+    // console.log(color);
 
     return (
         <Typography className='h1' component='h1' variant='h2'>
             Todos
-            <span style={style}>Get things done, one item at a time.</span>
+            <span style={{ color: isColor ? "white" : "blue" }} >Get things done, one item at a time.</span>
         </Typography>
     )
 }

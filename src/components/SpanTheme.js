@@ -13,14 +13,14 @@ import React, { useReducer, createContext } from 'react'
 // Step 3: Khoi tao Kho chua voi syntax: 
 //         const [state.dispatch] = useReducer(reducer, beginVablue: object)
 
-export const SpanTheme = createContext() // Provider Name
+export const SpanTheme = createContext(); // Provider Name
 
 // Provider
 const SpanThemeProvider = ({ children }) => {
 
 // ----------- Create Reducer ----------------
     // Khoi tao bien ban dau: Object
-    const INITIAL_VALUE = { color: 'white' }
+    const INITIAL_VALUE = { isColor: false }
 
     // Dinh nghia reducer
     const spanReducer = ( spanState, spanAction) => {
@@ -28,7 +28,7 @@ const SpanThemeProvider = ({ children }) => {
             case "CHANGE":
                 return {
                     ...spanState,
-                    color: spanAction.payload.color
+                    isColor: spanAction.payload.isColor
                 }
             default:
                 return spanState
@@ -40,7 +40,7 @@ const SpanThemeProvider = ({ children }) => {
         dispatch ({
             type: 'CHANGE',
             payload: {
-                color: 'blue'
+                isColor: spanState.isColor ? false : true
             }
         })
     }
@@ -55,7 +55,7 @@ const SpanThemeProvider = ({ children }) => {
     
     // Return Provider
     return (
-        <SpanTheme.Provider value={ { spanState, changeSpan } } >
+        <SpanTheme.Provider value={{ spanState, changeSpan }} >
             { children }
         </SpanTheme.Provider>
     );
