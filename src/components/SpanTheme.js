@@ -7,7 +7,7 @@ import React, { useReducer, createContext } from 'react'
 // Step 3:   Tra ve Kho Chua Context ( Provider )
 
 // Muon dung mot Reducer
-// Co 2 Step
+// Co 3 Step
 // Step 1: Dinh nghia reducer (Kho chua)
 // Step 2: Tao mot function de thuc hien hanh dong
 // Step 3: Khoi tao Kho chua voi syntax: 

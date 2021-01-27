@@ -7,7 +7,7 @@ import { SpanTheme } from './SpanTheme'
 const Header = () => {
 
     // Catch Context
-    const { spanState } = useContext(SpanTheme)
+    const { spanState, changeSpan } = useContext(SpanTheme)
     // console.log(spanState)
     const { isColor } =  spanState ;
     // Assign to Style
@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <Typography className='h1' component='h1' variant='h2'>
             Todos
-            <span style={{ color: isColor ? "white" : "blue" }} >Get things done, one item at a time.</span>
+            <span onClick={changeSpan} style={{ color: isColor ? "white" : "blue" }} >Get things done, one item at a time.</span>
         </Typography>
     )
 }
