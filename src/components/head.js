@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <Typography className='h1' component='h1' variant='h2'>
             Todos
-            <span onClick={changeSpan} style={{ color: isColor ? "white" : "cyan" }} >Get things done, one item at a time.</span>
+            <span onClick={changeSpan} style={{ color: isColor ? "white" : "black" }} >Get things done, one item at a time.</span>
         </Typography>
     )
 }
